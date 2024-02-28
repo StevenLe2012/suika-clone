@@ -29,6 +29,7 @@ public class AnimalCombiner : MonoBehaviour
         if (thisID > otherID)
         {
             GameManager.Instance.IncreaseScore(_info.PointsWhenAnnihilated);
+            AudioManager.Instance.PlayCombineSFX();
             // if last animal, destroy both
             if (_info.AnimalIndex == AnimalSelector.Instance.Animals.Length - 1)
             {
